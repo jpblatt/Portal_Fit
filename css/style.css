@@ -9,6 +9,11 @@ body{
     color: #333;
 }
 
+a{
+    color: inherit;
+}
+
+/* CABEÇALHO */
 .cabecalho{
     display: flex;
     justify-content: space-between;
@@ -18,21 +23,40 @@ body{
     color: white;
 }
 
+.logo{
+    font-size: 1.4rem;
+}
+
 .menu a {
     color: white;
     text-decoration: none;
     margin-left: 20px;
 }
 
+.menu a:hover,
+.menu a[aria-current="page"]{
+    text-decoration: underline;
+}
+
+/* HERO */
 .hero{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: left;
     padding: 80px 20px;
     background-color: #f4f4f9;
 }
 
+.hero-texto{
+    max-width: 420px;
+}
+
 .hero h2{
     font-size: 2.5rem;
-    margin-bottom: left;
+    margin-bottom: 16px;
 }
 
 .hero p{
@@ -41,20 +65,80 @@ body{
     color: #555;
 }
 
+.hero-imagem{
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+}
+
 .botao{
     display: inline-block;
     background-color: #08a04d;
     color: white;
     padding: 12px 28px;
     text-decoration: none;
+    border: none;
     border-radius: 6px;
     font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 .botao:hover{
     background-color: #045f1b;
 }
 
+/* SOBRE / DIFERENCIAIS */
+.sobre{
+    padding: 60px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sobre h2{
+    font-size: 2rem;
+    margin-bottom: 24px;
+}
+
+.lista-diferenciais{
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+}
+
+.lista-diferenciais li{
+    padding: 6px 0;
+    padding-left: 22px;
+    position: relative;
+}
+
+.lista-diferenciais li::before{
+    content: "✓";
+    color: #08a04d;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* RESUMO DE SERVIÇOS (index) */
+.servicos-resumo{
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f4f4f9;
+}
+
+.servicos-resumo h2{
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.servicos-resumo p{
+    margin-bottom: 24px;
+    color: #555;
+}
+
+/* PÁGINA DE SERVIÇOS */
 .servicos{
     padding: 60px 20px;
     text-align: center;
@@ -62,7 +146,18 @@ body{
 
 .servicos h2{
     font-size: 2rem;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.servicos > p{
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    color: #555;
+}
+
+.cta-final{
+    margin-top: 30px;
+    color: #555;
 }
 
 .cards{
@@ -85,7 +180,7 @@ body{
 }
 
 .card:hover{
-    transform: translate(-6px);
+    transform: translateY(-6px);
 }
 
 .card h3{
@@ -97,17 +192,54 @@ body{
     color: #555;
     font-size: 0.95rem;
     line-height: 1.5;
+    margin-bottom: 12px;
 }
 
+.card ul{
+    padding-left: 20px;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* PÁGINA DE CONTATO */
+.contato{
+    padding: 60px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contato h2{
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.contato > p{
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.info-contato ul{
+    list-style: none;
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* RODAPÉ */
 .rodape{
     text-align: center;
     padding: 30px 20px;
     background-color: #1a1a2e;
     color: white;
     font-size: 0.9rem;
-
 }
 
 .rodape p{
     margin-bottom: 6px;
+}
+
+.rodape a{
+    color: white;
+    text-decoration: underline;
 }

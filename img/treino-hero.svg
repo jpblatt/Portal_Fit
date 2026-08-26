@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" role="img" aria-labelledby="titulo-ilustracao">
+  <title id="titulo-ilustracao">Ilustração de um haltere representando treino de musculação</title>
+  <rect width="400" height="220" fill="#f4f4f9"/>
+  <g stroke="#1a1a2e" stroke-width="10" stroke-linecap="round">
+    <line x1="70" y1="110" x2="330" y2="110"/>
+  </g>
+  <g fill="#08a04d">
+    <rect x="40" y="70" width="30" height="80" rx="8"/>
+    <rect x="15" y="85" width="20" height="50" rx="6"/>
+    <rect x="330" y="70" width="30" height="80" rx="8"/>
+    <rect x="365" y="85" width="20" height="50" rx="6"/>
+  </g>
+  <g fill="#1a1a2e">
+    <rect x="60" y="90" width="16" height="40" rx="4"/>
+    <rect x="324" y="90" width="16" height="40" rx="4"/>
+  </g>
+</svg>

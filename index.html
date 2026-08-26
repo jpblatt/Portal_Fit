@@ -3,58 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Fit - Serviços de academia </title>
-    <link rel ="stylesheet" href="css/style.css">
+    <title>Portal Fit - Serviços de academia</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!--CABEÇALHO-->
 <header class="cabecalho">
     <h1 class="logo">Portal Fit</h1>
-    <p>Bem vindo ao meu portal!</p>
-    <nav class="menu">
-        <a href="#servicos">Serviços</a>
-        <a href="#contato">Contato</a>
+    <nav class="menu" aria-label="Navegação principal">
+        <a href="index.html" aria-current="page">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="contato.html">Contato</a>
     </nav>
 </header>
 
-<!--HERO-->
-<section class="hero">
-    <h2>Treino sob medida para você</h2>
-    <p>Conectamos você a especialistas em treino, avaliação física e nutrição.</p>
-    <a href="#servicos" class="botao">Conheça os serviços</a>
-</section>
+<main>
 
-<!--SERVIÇOS/CARDS-->
-<section id="servicos" class="servicos">
-    <h2>Nossos Serviços</h2>
-    <div class="cards">
+    <!--HERO-->
+    <section class="hero">
+        <div class="hero-texto">
+            <h2>Treino sob medida para você</h2>
+            <p>Conectamos você a especialistas em treino, avaliação física e nutrição, tudo em um só lugar.</p>
+            <a href="servicos.html" class="botao">Conheça os serviços</a>
+        </div>
+        <img src="img/treino-hero.svg" alt="Ilustração de um haltere, representando o treino de musculação" class="hero-imagem" width="320" height="176">
+    </section>
 
-        <!--CARD 1-->
-        <div class="card">
-            <h3>Treino personalizado</h3>
-            <p>Montagem de treino individualde acordo com seu objetivo</p>
-            <div>
+    <!--SOBRE / DIFERENCIAIS-->
+    <section class="sobre">
+        <h2>Por que escolher o Portal Fit?</h2>
+        <ul class="lista-diferenciais">
+            <li>Profissionais qualificados em educação física e nutrição.</li>
+            <li>Acompanhamento periódico da sua evolução.</li>
+            <li>Planos flexíveis, sem fidelidade obrigatória.</li>
+            <li>Atendimento próximo, com canal direto de contato.</li>
+        </ul>
+    </section>
 
-    <!--CARD 2-->
-    <div class="card">
-        <h3>Avaliação Física</h3>
-        <p>Bioimpedância e acompanhamento de evolução corporal periódico.</p>
-        <div>
+    <!--CHAMADA PARA SERVIÇOS-->
+    <section class="servicos-resumo">
+        <h2>Nossos Serviços</h2>
+        <p>Conheça os planos de treino, avaliação física e acompanhamento nutricional que preparamos para você.</p>
+        <a href="servicos.html" class="botao">Ver todos os serviços</a>
+    </section>
 
-    <!--CARD 3-->
-    <div class="card">
-        <h3>Acompanhamento Nutricional</h3>
-        <p>Orientação alimentar integrada ao seu plano de treino.</p>
-        <div>
-    </div>
-</section>
-    
+</main>
 
-    <footer id="contato" class="rodape">
-        <p>Portal Fit &copy; 2026 </p>
-        <p>contato@portalfit.com</p>
-    </footer>
+<!--RODAPÉ-->
+<footer class="rodape">
+    <p>Portal Fit &copy; 2026</p>
+    <p>contato@portalfit.com</p>
+    <p><a href="contato.html">Fale conosco</a></p>
+</footer>
 
 </body>
 </html>
