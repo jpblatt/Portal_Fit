@@ -41,5 +41,4 @@ João Pedro Wolff Blatt
 
 ## Publicação
 
-Repositório: (adicionar link do GitHub aqui)
-Site publicado: (adicionar link do GitHub Pages aqui, se já publicado em aula)
+Repositório: (https://github.com/jpblattPotal_Fit)
