@@ -26,9 +26,9 @@ Portal_Fit/
 - Menu de navegação funcionando entre as páginas;
 - Uso de HTML semântico (`header`, `nav`, `main`, `section`, `article`, `footer`);
 - Títulos, parágrafos, listas, links e imagem com texto alternativo;
+- Formulário de contato com `label` associado a cada campo;
+- Validação HTML básica nos campos obrigatórios (`required`, `minlength`, tipos `email`/`tel`);
 - CSS inicial para identidade visual do portal.
-
-> **Atenção:** a página de contato não possui formulário, apenas os canais de contato diretos. O item "formulário com label associado aos campos" e "validação HTML básica nos campos obrigatórios", exigido no enunciado da Entrega 1, não é atendido nesta versão.
 
 ## Tecnologias utilizadas
 
@@ -41,4 +41,5 @@ João Pedro Wolff Blatt
 
 ## Publicação
 
-Repositório: (https://github.com/jpblatt/Potal_Fit)
+Repositório: (adicionar link do GitHub aqui)
+Site publicado: (adicionar link do GitHub Pages aqui, se já publicado em aula)

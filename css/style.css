@@ -219,11 +219,54 @@ a{
     margin-bottom: 30px;
 }
 
+.formulario-contato{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 40px;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label{
+    font-weight: bold;
+    color: #1a1a2e;
+}
+
+.campo input,
+.campo select,
+.campo textarea{
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus{
+    outline: 2px solid #08a04d;
+    border-color: #08a04d;
+}
+
+.formulario-contato .botao{
+    align-self: flex-start;
+}
+
+.info-contato h2{
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
 .info-contato ul{
     list-style: none;
     color: #555;
     line-height: 1.8;
-    font-size: 1.05rem;
 }
 
 /* RODAPÉ */
