@@ -202,6 +202,77 @@ a{
     line-height: 1.6;
 }
 
+/* CONSULTA INTERATIVA DE SERVIÇO (Aula 08) */
+.consulta-servico{
+    max-width: 480px;
+    margin: 0 auto 60px auto;
+    padding: 30px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.consulta-servico h2{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.consulta-servico p{
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.consulta-servico label{
+    display: block;
+    font-weight: bold;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+}
+
+.consulta-servico select{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+.consulta-servico select:focus{
+    outline: 2px solid #08a04d;
+    border-color: #08a04d;
+}
+
+.resultado-consulta{
+    margin-top: 18px;
+    padding: 14px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    color: #1a1a2e;
+    min-height: 20px;
+}
+
+/* CATÁLOGO DINÂMICO DE SERVIÇOS (Aulas 09 e 10) */
+.catalogo{
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+.catalogo h2{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.catalogo > p{
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    color: #555;
+}
+
 /* PÁGINA DE CONTATO */
 .contato{
     padding: 60px 20px;
