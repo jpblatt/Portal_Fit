@@ -64,6 +64,24 @@
         <p class="cta-final">Ficou com alguma dúvida sobre os serviços? <a href="contato.html">Entre em contato com a gente</a>.</p>
     </section>
 
+    <!--CONSULTA INTERATIVA DE SERVIÇO (Aula 08 - JS/DOM)-->
+    <section class="consulta-servico">
+        <h2>Consulte um serviço</h2>
+        <p>Selecione um serviço abaixo para ver uma orientação rápida sobre como proceder.</p>
+
+        <label for="servico">Escolha um serviço:</label>
+        <select id="servico">
+            <option value="">Selecione...</option>
+            <option value="treino">Treino personalizado</option>
+            <option value="avaliacao">Avaliação física</option>
+            <option value="nutricao">Acompanhamento nutricional</option>
+        </select>
+
+        <button id="btnConsultar" type="button" class="botao">Consultar orientação</button>
+
+        <p id="resultado" class="resultado-consulta" aria-live="polite"></p>
+    </section>
+
 </main>
 
 <!--RODAPÉ-->
@@ -71,6 +89,8 @@
     <p>Portal Fit &copy; 2026</p>
     <p>contato@portalfit.com</p>
 </footer>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
