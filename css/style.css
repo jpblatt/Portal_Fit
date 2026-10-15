@@ -18,6 +18,8 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
     padding: 20px 40px;
     background-color: #1a1a2e;
     color: white;
@@ -54,7 +56,7 @@ a{
     max-width: 420px;
 }
 
-.hero h2{
+.hero h1{
     font-size: 2.5rem;
     margin-bottom: 16px;
 }
@@ -73,7 +75,7 @@ a{
 
 .botao{
     display: inline-block;
-    background-color: #08a04d;
+    background-color: #067a3a;
     color: white;
     padding: 12px 28px;
     text-decoration: none;
@@ -86,6 +88,11 @@ a{
 
 .botao:hover{
     background-color: #045f1b;
+}
+
+.botao:focus-visible{
+    outline: 3px solid #1a1a2e;
+    outline-offset: 3px;
 }
 
 /* SOBRE / DIFERENCIAIS */
@@ -115,7 +122,7 @@ a{
 
 .lista-diferenciais li::before{
     content: "✓";
-    color: #08a04d;
+    color: #067a3a;
     position: absolute;
     left: 0;
     font-weight: bold;
@@ -144,7 +151,7 @@ a{
     text-align: center;
 }
 
-.servicos h2{
+.servicos h1{
     font-size: 2rem;
     margin-bottom: 20px;
 }
@@ -241,8 +248,8 @@ a{
 }
 
 .consulta-servico select:focus{
-    outline: 2px solid #08a04d;
-    border-color: #08a04d;
+    outline: 2px solid #067a3a;
+    border-color: #067a3a;
 }
 
 .resultado-consulta{
@@ -280,7 +287,7 @@ a{
     margin: 0 auto;
 }
 
-.contato h2{
+.contato h1{
     font-size: 2rem;
     margin-bottom: 16px;
 }
@@ -321,8 +328,8 @@ a{
 .campo input:focus,
 .campo select:focus,
 .campo textarea:focus{
-    outline: 2px solid #08a04d;
-    border-color: #08a04d;
+    outline: 2px solid #067a3a;
+    border-color: #067a3a;
 }
 
 .formulario-contato .botao{
@@ -356,4 +363,38 @@ a{
 .rodape a{
     color: white;
     text-decoration: underline;
+}
+
+/* RESPONSIVIDADE E ACESSIBILIDADE */
+@media (max-width: 600px){
+    .cabecalho{
+        padding: 16px 20px;
+    }
+
+    .menu a{
+        margin-left: 0;
+        margin-right: 16px;
+    }
+
+    .hero{
+        padding: 50px 20px;
+    }
+
+    .hero h1{
+        font-size: 2rem;
+    }
+
+    .card{
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .card{
+        transition: none;
+    }
+
+    .card:hover{
+        transform: none;
+    }
 }
