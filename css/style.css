@@ -280,6 +280,50 @@ a{
     color: #555;
 }
 
+/* PREFERÊNCIA COM LOCALSTORAGE (Aula 13) */
+.preferencia{
+    padding: 60px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.preferencia h2{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.preferencia p{
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.preferencia label{
+    display: block;
+    font-weight: bold;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+}
+
+.preferencia select{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-bottom: 16px;
+    background-color: white;
+}
+
+.preferencia select:focus{
+    outline: 2px solid #067a3a;
+    border-color: #067a3a;
+}
+
+.preferencia .resultado-consulta{
+    color: #1a1a2e;
+}
+
 /* FILTRO DO CATÁLOGO (Aula 11) */
 .filtro-catalogo{
     max-width: 400px;
@@ -369,6 +413,31 @@ a{
 
 .formulario-contato .botao{
     align-self: flex-start;
+}
+
+/* MENSAGEM DO FORMULÁRIO (Aula 12) */
+.mensagem-form:empty{
+    display: none;
+}
+
+.mensagem-form{
+    padding: 12px 14px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #1a1a2e;
+}
+
+.mensagem-form.erro{
+    border-color: #b3261e;
+    background-color: #fdecea;
+    color: #8c1d18;
+}
+
+.mensagem-form.sucesso{
+    border-color: #067a3a;
+    background-color: #e8f5ec;
+    color: #05592b;
 }
 
 .info-contato h2{

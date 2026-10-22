@@ -104,6 +104,25 @@
         <div id="listaServicos" class="cards"></div>
     </section>
 
+    <!--PREFERÊNCIA SALVA NO NAVEGADOR (Aula 13 - LocalStorage)-->
+    <section class="preferencia">
+        <h2>Meu serviço favorito</h2>
+        <p>Escolha o serviço que mais combina com você. O navegador vai lembrar da sua escolha mesmo depois de atualizar a página.</p>
+
+        <label for="servicoFavorito">Escolha:</label>
+        <select id="servicoFavorito">
+            <option value="">Selecione...</option>
+            <option value="treino">Treino personalizado</option>
+            <option value="consultoria">Consultoria de treino online</option>
+            <option value="avaliacao">Avaliação física</option>
+            <option value="reavaliacao">Reavaliação mensal</option>
+            <option value="nutricao">Acompanhamento nutricional</option>
+        </select>
+
+        <button id="btnSalvarFavorito" type="button" class="botao">Salvar favorito</button>
+        <p id="favoritoSalvo" class="resultado-consulta" aria-live="polite"></p>
+    </section>
+
 </main>
 
 <!--RODAPÉ-->

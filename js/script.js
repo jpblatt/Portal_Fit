@@ -122,3 +122,40 @@ filtroCategoria.addEventListener("change", () => {
         mensagemFiltro.textContent = servicosFiltrados.length + " serviço(s) encontrado(s).";
     }
 });
+
+// ===================================================
+// AULA 13 - Serviço favorito salvo no LocalStorage
+// (guarda só uma preferência simples, nenhum dado pessoal ou sensível)
+// ===================================================
+
+// Encontra o select, o botão e o parágrafo da preferência
+const campoFavorito = document.querySelector("#servicoFavorito");
+const botaoFavorito = document.querySelector("#btnSalvarFavorito");
+const mensagemFavorito = document.querySelector("#favoritoSalvo");
+
+// Devolve o texto da opção (ex.: "Avaliação física") a partir do value (ex.: "avaliacao")
+function nomeDoServico(valor) {
+    const opcao = campoFavorito.querySelector(`option[value="${valor}"]`);
+    return opcao ? opcao.textContent : valor;
+}
+
+// Ao clicar, lê a escolha e salva com setItem(chave, valor)
+botaoFavorito.addEventListener("click", () => {
+    const servico = campoFavorito.value;
+
+    if (servico === "") {
+        mensagemFavorito.textContent = "Escolha um serviço primeiro.";
+        return;
+    }
+
+    localStorage.setItem("servicoFavorito", servico);
+    mensagemFavorito.textContent = `Favorito salvo: ${nomeDoServico(servico)}`;
+});
+
+// Ao abrir/atualizar a página, recupera o valor com getItem(chave)
+const favoritoSalvo = localStorage.getItem("servicoFavorito");
+
+if (favoritoSalvo) {
+    campoFavorito.value = favoritoSalvo;
+    mensagemFavorito.textContent = `Seu serviço favorito é: ${nomeDoServico(favoritoSalvo)}`;
+}
