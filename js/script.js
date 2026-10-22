@@ -29,38 +29,54 @@ botaoConsultar.addEventListener("click", () => {
 // ===================================================
 
 // Lista de serviços do Portal Fit, organizada como array de objetos
+// AULA 11 - cada objeto agora tem a propriedade categoria
 const servicos = [
     {
         nome: "Treino personalizado",
-        descricao: "Montagem de treino individual de acordo com seu objetivo."
+        descricao: "Montagem de treino individual de acordo com seu objetivo.",
+        categoria: "treino"
+    },
+    {
+        nome: "Consultoria de treino online",
+        descricao: "Planilha de treino e acompanhamento a distância pelo aplicativo.",
+        categoria: "treino"
     },
     {
         nome: "Avaliação física",
-        descricao: "Bioimpedância e acompanhamento de evolução corporal periódico."
+        descricao: "Bioimpedância e acompanhamento de evolução corporal periódico.",
+        categoria: "avaliacao"
+    },
+    {
+        nome: "Reavaliação mensal",
+        descricao: "Nova medição de peso, medidas e percentual de gordura para comparar a evolução.",
+        categoria: "avaliacao"
     },
     {
         nome: "Acompanhamento nutricional",
-        descricao: "Orientação alimentar integrada ao seu plano de treino."
+        descricao: "Orientação alimentar integrada ao seu plano de treino.",
+        categoria: "nutricao"
     }
 ];
 
-// Testes dos dados no Console (checkpoint 1 da atividade)
+// Testes dos dados no Console (checkpoint 1 da Aula 11)
 console.table(servicos);
-console.log(servicos[0].nome);
-console.log(servicos[1].descricao);
-
-servicos.forEach((servico) => {
-    console.log(servico.nome);
-});
+console.log(servicos[0].categoria);
 
 // Container do DOM onde os cards serão inseridos
 const listaServicos = document.querySelector("#listaServicos");
 
-// Monta um card para cada serviço do array e insere no DOM
-function renderizarServicos() {
+// Monta um card para cada serviço da lista recebida e insere no DOM
+// AULA 11 - a função recebe a lista que deve aparecer na tela
+function renderizarServicos(lista) {
     listaServicos.innerHTML = "";
 
-    servicos.forEach((servico) => {
+    // Lista vazia: mostra uma orientação e encerra a função antes do forEach
+    if (lista.length === 0) {
+        listaServicos.textContent = "Nenhum serviço foi encontrado nesta categoria.";
+        return;
+    }
+
+    lista.forEach((servico) => {
         const card = document.createElement("article");
         card.classList.add("card");
 
@@ -75,4 +91,34 @@ function renderizarServicos() {
     });
 }
 
-renderizarServicos();
+// Ao abrir a página, mostra o catálogo completo
+renderizarServicos(servicos);
+
+// ===================================================
+// AULA 11 - Filtro interativo de serviços
+// ===================================================
+
+// Encontra o select do filtro e o parágrafo da mensagem
+const filtroCategoria = document.querySelector("#filtroCategoria");
+const mensagemFiltro = document.querySelector("#mensagemFiltro");
+
+// change: dispara quando o usuário troca a opção do select
+filtroCategoria.addEventListener("change", () => {
+    // value: devolve o value da option selecionada
+    const categoriaEscolhida = filtroCategoria.value;
+    console.log(categoriaEscolhida);
+
+    if (categoriaEscolhida === "todos") {
+        renderizarServicos(servicos);
+        mensagemFiltro.textContent = "Mostrando todos os serviços.";
+    } else {
+        // filter cria uma NOVA lista só com os serviços da categoria escolhida
+        // (o array servicos original não é modificado)
+        const servicosFiltrados = servicos.filter((servico) => {
+            return servico.categoria === categoriaEscolhida;
+        });
+
+        renderizarServicos(servicosFiltrados);
+        mensagemFiltro.textContent = servicosFiltrados.length + " serviço(s) encontrado(s).";
+    }
+});

@@ -16,7 +16,7 @@ Potal_Fit/
 ├── css/
 │   └── style.css       # Estilos do site
 ├── js/
-│   └── script.js        # Consulta interativa + catálogo dinâmico de serviços
+│   └── script.js        # Consulta interativa + catálogo dinâmico + filtro por categoria
 └── img/
     └── treino-hero.svg  # Imagem ilustrativa da página inicial
 ```
@@ -30,13 +30,14 @@ Potal_Fit/
 - Formulário de contato com `label` associado a cada campo e validação HTML básica (`required`, `minlength`, tipos `email`/`tel`);
 - Consulta interativa de serviço: seleciona um serviço e recebe uma orientação diferente para cada um, usando JavaScript (DOM, evento `click` e `if`/`else`);
 - Catálogo dinâmico de serviços: os serviços são mantidos em um array de objetos (`nome`, `descricao`) e os cards são criados automaticamente no DOM com `forEach`, `document.createElement` e a função `renderizarServicos()`;
+- Filtro interativo por categoria: cada serviço tem a propriedade `categoria`; ao trocar a opção do `select` (evento `change` + `value`), o `filter` cria uma nova lista e `renderizarServicos(lista)` atualiza os cards sem recarregar a página, com mensagem para categoria sem resultados;
 - CSS para identidade visual do portal.
 
 ## Tecnologias utilizadas
 
 - HTML5
 - CSS3
-- JavaScript (DOM, arrays, objetos, funções)
+- JavaScript (DOM, eventos, arrays, objetos, funções, filter)
 
 ## Autor
 

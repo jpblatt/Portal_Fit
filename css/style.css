@@ -280,6 +280,41 @@ a{
     color: #555;
 }
 
+/* FILTRO DO CATÁLOGO (Aula 11) */
+.filtro-catalogo{
+    max-width: 400px;
+    margin: 0 auto 30px auto;
+    text-align: left;
+}
+
+.filtro-catalogo label{
+    display: block;
+    font-weight: bold;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+}
+
+.filtro-catalogo select{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.filtro-catalogo select:focus{
+    outline: 2px solid #067a3a;
+    border-color: #067a3a;
+}
+
+.mensagem-filtro{
+    margin-top: 10px;
+    color: #555;
+    min-height: 1.2em;
+}
+
 /* PÁGINA DE CONTATO */
 .contato{
     padding: 60px 20px;

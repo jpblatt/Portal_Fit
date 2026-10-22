@@ -83,10 +83,24 @@
         <p id="resultado" class="resultado-consulta" aria-live="polite"></p>
     </section>
 
-    <!--CATÁLOGO DINÂMICO DE SERVIÇOS (Aulas 09 e 10 - arrays/funções/DOM)-->
+    <!--CATÁLOGO DINÂMICO DE SERVIÇOS (Aulas 09, 10 e 11 - arrays/funções/DOM/filtro)-->
     <section class="catalogo">
         <h2>Catálogo de serviços</h2>
         <p>Lista gerada automaticamente a partir dos dados dos nossos serviços.</p>
+
+        <!--FILTRO POR CATEGORIA (Aula 11)-->
+        <div class="filtro-catalogo">
+            <label for="filtroCategoria">Filtrar serviços por categoria:</label>
+            <select id="filtroCategoria">
+                <option value="todos">Todos os serviços</option>
+                <option value="treino">Treino</option>
+                <option value="avaliacao">Avaliação</option>
+                <option value="nutricao">Nutrição</option>
+                <option value="recuperacao">Recuperação (em breve)</option>
+            </select>
+            <p id="mensagemFiltro" class="mensagem-filtro" aria-live="polite"></p>
+        </div>
+
         <div id="listaServicos" class="cards"></div>
     </section>
 
