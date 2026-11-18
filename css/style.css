@@ -324,6 +324,74 @@ a{
     color: #1a1a2e;
 }
 
+/* CONSULTA DE CEP COM API (Atividade Final) */
+.consulta-cep{
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+    padding: 30px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+}
+
+.consulta-cep h2{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.consulta-cep > p{
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.consulta-cep label{
+    display: block;
+    font-weight: bold;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+}
+
+.consulta-cep input{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-bottom: 16px;
+    background-color: white;
+}
+
+.consulta-cep input:focus{
+    outline: 2px solid #067a3a;
+    border-color: #067a3a;
+}
+
+.consulta-cep .botao:disabled{
+    background-color: #6b7c72;
+    cursor: wait;
+}
+
+.status-cep{
+    margin-top: 16px;
+    font-weight: bold;
+    color: #1a1a2e;
+    min-height: 1.2em;
+}
+
+.resultado-cep:empty{
+    display: none;
+}
+
+.resultado-cep{
+    margin-top: 10px;
+    padding: 14px;
+    background-color: white;
+    border: 1px solid #067a3a;
+    border-radius: 6px;
+    color: #1a1a2e;
+    line-height: 1.5;
+}
+
 /* FILTRO DO CATÁLOGO (Aula 11) */
 .filtro-catalogo{
     max-width: 400px;

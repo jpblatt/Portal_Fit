@@ -123,6 +123,21 @@
         <p id="favoritoSalvo" class="resultado-consulta" aria-live="polite"></p>
     </section>
 
+    <!--CONSULTA DE ENDEREÇO POR CEP (Atividade Final - API pública ViaCEP)-->
+    <section class="consulta-cep">
+        <h2>Consulta de endereço por CEP</h2>
+        <p>Quer saber se atendemos na sua região? Digite um CEP brasileiro com 8 números.</p>
+
+        <label for="cep">CEP:</label>
+        <input id="cep" type="text" inputmode="numeric" maxlength="9"
+               placeholder="00000-000" autocomplete="postal-code">
+
+        <button id="btnBuscarCep" type="button" class="botao">Buscar endereço</button>
+
+        <p id="statusCep" class="status-cep" aria-live="polite"></p>
+        <div id="resultadoCep" class="resultado-cep"></div>
+    </section>
+
 </main>
 
 <!--RODAPÉ-->
@@ -132,6 +147,7 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script src="js/cep.js"></script>
 
 </body>
 </html>
